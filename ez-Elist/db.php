@@ -17,8 +17,8 @@ function strip($data)
 function printItems()
 {
     global $db;
-    global $pageId;
-    $sql = "SELECT id, item FROM $pageId";
+    //global $pageId;
+    $sql = "SELECT id, item FROM ezelist";
     foreach($db->query($sql) as $row)
     {
         $getItem = str_replace("`","'",$row["item"]);
@@ -36,17 +36,17 @@ function printItems()
 function doItem($action)
 {
     global $db;
-    global $pageId;
+    //global $pageId;
     $id = strip($_GET['id']);
     $item = strip($_POST['item']);
     switch($action)
     {
         case 0:
-            $db->exec("DELETE FROM $pageId WHERE id = '$id'");
+            $db->exec("DELETE FROM ezelist WHERE id = '$id'");
             break;
         case 1:
             if (!$item){break;}
-            $db->query("INSERT INTO $pageId (item) VALUES ('$item')");
+            $db->query("INSERT INTO ezelist (item) VALUES ('$item')");
             break;
     }
 }
