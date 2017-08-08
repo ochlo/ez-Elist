@@ -4,7 +4,7 @@ listName=$1
 serverDir=$2
 installDir=$3
 usage() {
-    printf 'Usage: %s ListName /Server/Dir /Install/Dir
+printf 'Usage: %s ListName /Server/Dir /Install/Dir
     ListName:  Name of your list
     ServerDir: Web server directory to install the list files
     InstalDir: Directory in which base installation files will reside\n'\
