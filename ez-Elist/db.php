@@ -1,6 +1,6 @@
 <?php
 //Variables
-$db = new PDO("sqlite:PATH/TO/DB.db");
+$db = new PDO("sqlite:db.sqlite3");
 //$me = $_SERVER['PHP_SELF'];
 //Functions
 function strip($data)
